@@ -20,11 +20,11 @@ request.onupgradeneeded = function (e) {
 };
 
 request.onerror = function (e) {
-  console.log(`Woops! ${e.target.errorCode}`);
+  console.log(`ERROR: ${e.target.errorCode}`);
 };
 
 function checkDatabase() {
-  console.log('check db invoked');
+  console.log('checking database');
 
   // Open a transaction on your BudgetStore db
   let transaction = db.transaction(['BudgetStore'], 'readwrite');
@@ -59,7 +59,7 @@ function checkDatabase() {
 
             // Clear existing entries because our bulk add was successful
             currentStore.clear();
-            console.log('Clearing store 🧹');
+            console.log('Store is cleared');
           }
         });
     }
@@ -72,7 +72,7 @@ request.onsuccess = function (e) {
 
   // Check if app is online before reading from db
   if (navigator.onLine) {
-    console.log('Backend online! 🗄️');
+    console.log('Online');
     checkDatabase();
   }
 };
