@@ -26,6 +26,6 @@ To install from GitHub, follow these steps:
 
 ## Usage
 
-Deployed webpage on Heroku can be found here: [Deployed Heroku Page](https://polar-wave-06680.herokuapp.com/)
+Deployed webpage on Heroku can be found here: [Deployed Heroku Page](https://arcane-wildwood-00770.herokuapp.com/)
 
 
